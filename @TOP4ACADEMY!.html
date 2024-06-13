@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Four Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: green;
+        }
+        p {
+            color: blue;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input[type="email"], input[type="text"], input[type="number"], input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .payment-details {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top Four Academy</h1>
+        <p>Dear students, get a study package for any BSc program , for as little as M50.00!</p>
+        <form id="packageForm">
+            <label for="bscProgram">Choose your BSc program:</label>
+            <select id="bscProgram" required>
+                <option value="Bsc Nursing">Bsc Nursing</option>
+                <option value="Bsc Environmental Health">Bsc Environmental Health</option>
+                <option value="Bsc Nutrition">Bsc Nutrition</option>
+                <option value="Bsc Pharmacy">Bsc Pharmacy</option>
+                <option value="Bsc Agric">Bsc Agric</option>
+                <option value="Bsc General">Bsc General</option>
+                <option value="Bsc Information Systems">Bsc Information Systems</option>
+                <option value="Bsc Education">Bsc Education</option>
+                <option value="Bsc Computer Science">Bsc Computer Science</option>
+                <option value="Bsc Statistics">Bsc Statistics</option>
+                <option value="Other BSc programs">Other BSc programs</option>
+            </select>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" required>
+            
+            <label for="transactionId">Transaction ID:</label>
+            <input type="text" id="transactionId" required>
+            
+            
+            <div class="payment-details">
+                Payment details:
+                <p>Mpesa:57331801 (Senakal) </p>
+                <p>Ecocash: 63947686 (Khoele) </p>
+            </div>
+            
+            <button type="submit">Get Package</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('packageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            alert("WAIT...your details will be  submitted to TOPFOUR ACADEMY via email!, PRESS OK,THE WEB WILL TAKE YOU TO GMAIL,just press the send icon .\nCheck your Google Drive after 5 minuts of submission");
+
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var transactionId = document.getElementById('transactionId').value;
+            var body = 'Email: ' + email + '%0D%0A' + 'Phone Number: ' + phone + '%0D%0A' + 'Transaction ID: ' + transactionId;
+            window.location = 'mailto:topfouracademy@gmail.com?subject=Contact&body=' + body;
+        });
+    </script>
+</body>
+</html>
