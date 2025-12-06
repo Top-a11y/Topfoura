@@ -5,18 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Top Four Academy | First Class Study Success System</title>
 <style>
-  /* ===================== */
-  /* VARIABLES */
   :root {
     --premium-blue: #0A2463;
     --gold-accent: #FFD700;
     --urgency-red: #D62839;
     --light-grey: #F8F9FA;
     --hover-scale: 1.08;
-    --button-glow: 0 0 20px rgba(255, 215, 0, 0.6);
   }
 
-  /* ===================== */
   /* GLOBAL STYLES */
   body, html {
     margin: 0;
@@ -24,7 +20,7 @@
     font-family: 'Arial', sans-serif;
     color: var(--premium-blue);
     overflow-x: hidden;
-    background: url('https://wallpapercave.com/wp/wp8774869.jpg') no-repeat center center fixed;
+    background: url('https://wallpapers.com/images/hd/graduating-students-education-103rus3otvquzmrc.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
   }
@@ -37,7 +33,6 @@
     z-index: -1;
   }
 
-  /* ===================== */
   /* HEADER */
   .premium-header {
     background: linear-gradient(135deg, var(--premium-blue), #1E3B70);
@@ -46,15 +41,12 @@
     text-align: center;
     box-shadow: 0 10px 30px rgba(10,36,99,0.3);
     position: relative;
-    overflow: visible;
-    animation: fadeInDown 1s ease-out forwards;
   }
 
   .logo-placeholder {
     position: absolute;
     top: 20px;
     left: 20px;
-    animation: slideInLeft 1s ease-out forwards;
   }
 
   .logo-placeholder img {
@@ -64,13 +56,11 @@
   .premium-header h1 {
     margin: 0;
     font-size: 2.6rem;
-    animation: fadeIn 1s ease-out forwards;
   }
 
   .premium-header p {
     margin: 0.5rem 0 0 0;
     font-size: 1.3rem;
-    animation: fadeIn 2s ease-out forwards;
   }
 
   .success-rate {
@@ -89,7 +79,6 @@
     animation: pulseBanner 2s infinite;
   }
 
-  /* ===================== */
   /* CONTAINER */
   .container {
     max-width: 900px;
@@ -99,10 +88,8 @@
     border-radius: 20px;
     box-shadow: 0 15px 50px rgba(0,0,0,0.2);
     border: 3px solid var(--gold-accent);
-    animation: fadeIn 2s ease-out forwards;
   }
 
-  /* ===================== */
   /* URGENCY */
   .urgency-section {
     background: linear-gradient(45deg, var(--urgency-red), #FF4D4D);
@@ -111,9 +98,6 @@
     border-radius: 15px;
     margin: 2rem 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-    animation: pulseCard 2s infinite;
   }
 
   .urgency-section span {
@@ -121,10 +105,8 @@
     font-size: 1.4em;
     display: block;
     margin-top: 0.5rem;
-    animation: bounceIn 2s infinite;
   }
 
-  /* ===================== */
   /* PAYMENT CARD */
   .payment-card {
     background: #FFFFFF;
@@ -132,58 +114,67 @@
     border-radius: 15px;
     margin: 2rem 0;
     border: 2px dashed var(--premium-blue);
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-    animation: fadeIn 2s ease-out forwards;
   }
 
-  .payment-card:hover {
-    transform: scale(var(--hover-scale));
-    box-shadow: 0 15px 40px rgba(10,36,99,0.4);
+  .payment-card h3 {
+    margin-top:0;
   }
 
-  .payment-card::before {
-    content: "⚡ INSTANT ACCESS UPON PAYMENT";
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--gold-accent);
-    color: var(--premium-blue);
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-weight: bold;
+  .payment-card div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 
-  /* ===================== */
-  /* M-PESA BUTTON */
-  .mpesa-button {
-    display: block;
-    margin: 1.5rem auto;
-    background: #00a859;
-    color: white;
-    padding: 18px 40px;
-    border-radius: 30px;
+  .payment-card p {
+    margin: 0.2rem 0;
+  }
+
+  /* PAYMENT BUTTONS */
+  .payment-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .payment-buttons button {
+    padding: 15px 40px;
     font-size: 1.2em;
     font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 168, 89, 0.7);
-    animation: pulseCard 2s infinite;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 30px;
     cursor: pointer;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
   }
 
-  .mpesa-button:hover {
+  .payment-buttons button:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 30px rgba(0, 255, 140, 1);
   }
 
-  /* ===================== */
+  #mpesaButton {
+    background: #D62839;
+    box-shadow: 0 0 20px rgba(214,40,57,0.7);
+  }
+
+  #mpesaButton:hover {
+    box-shadow: 0 0 35px rgba(214,40,57,1);
+  }
+
+  #ecocashButton {
+    background: #007BFF;
+    box-shadow: 0 0 20px rgba(0,123,255,0.7);
+  }
+
+  #ecocashButton:hover {
+    box-shadow: 0 0 35px rgba(0,123,255,1);
+  }
+
   /* FORM */
   .form-group {
     margin-bottom: 2rem;
-    animation: fadeIn 2.5s ease-out forwards;
   }
 
   label {
@@ -198,18 +189,14 @@
     border: 2px solid var(--premium-blue);
     border-radius: 10px;
     font-size: 16px;
-    transition: all 0.3s;
   }
 
   input:focus, select:focus {
     border-color: var(--gold-accent);
     box-shadow: 0 0 15px rgba(255,215,0,0.6);
     outline: none;
-    transform: scale(1.02);
   }
 
-  /* ===================== */
-  /* BUTTON */
   .premium-button {
     background: linear-gradient(45deg, var(--premium-blue), #1E3B70);
     color: white;
@@ -218,32 +205,13 @@
     border-radius: 50px;
     font-size: 1.3em;
     cursor: pointer;
-    transition: all 0.3s;
     width: 100%;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    position: relative;
-    overflow: hidden;
-    animation: glowPulse 2s infinite;
+    margin-top:1rem;
   }
 
-  .premium-button::after {
-    content: "➤";
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5em;
-    transition: all 0.3s;
-  }
-
-  .premium-button:hover {
-    transform: scale(var(--hover-scale));
-    box-shadow: var(--button-glow);
-  }
-
-  /* ===================== */
   /* TRUST BADGES */
   .trust-badges {
     display: flex;
@@ -260,17 +228,10 @@
     border-radius: 25px;
     font-weight: bold;
     font-size: 1em;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: transform 0.3s;
-    animation: bounceIn 2s infinite;
     margin: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
   }
 
-  .trust-badge:hover {
-    transform: scale(1.1) rotate(-3deg);
-  }
-
-  /* ===================== */
   /* TESTIMONIALS */
   .testimonials {
     margin: 3rem 0;
@@ -278,7 +239,6 @@
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
-    animation: fadeIn 3s ease-out forwards;
   }
 
   .testimonial {
@@ -286,10 +246,8 @@
     font-style: italic;
     font-weight: bold;
     color: var(--premium-blue);
-    animation: fadeIn 2s ease-out forwards;
   }
 
-  /* ===================== */
   /* FOOTER */
   footer {
     text-align: center;
@@ -298,10 +256,8 @@
     color: #555;
     border-top: 1px solid #ddd;
     margin-top: 3rem;
-    animation: fadeIn 3s ease-out forwards;
   }
 
-  /* ===================== */
   /* MODAL */
   #mpesaModal {
     display: none;
@@ -311,7 +267,6 @@
     z-index: 9999;
     justify-content:center;
     align-items:center;
-    display: flex;
   }
   #mpesaModalContent {
     background: white;
@@ -321,20 +276,18 @@
     text-align:center;
     color: #0A2463;
     font-weight:bold;
-    animation: fadeIn 0.5s ease-out forwards;
   }
   #mpesaModal button {
     margin-top: 1rem;
     padding: 10px 25px;
     border:none;
     border-radius: 25px;
-    background:#00a859;
+    background:#D62839;
     color:white;
     font-weight:bold;
     cursor:pointer;
   }
 
-  /* ===================== */
   /* ANIMATIONS */
   @keyframes pulseBanner {
     0% { transform: translateX(-50%) scale(1); }
@@ -342,38 +295,6 @@
     100% { transform: translateX(-50%) scale(1); }
   }
 
-  @keyframes pulseCard {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
-  }
-
-  @keyframes glowPulse {
-    0% { box-shadow: 0 0 10px #FFD700; }
-    50% { box-shadow: 0 0 25px #FFD700; }
-    100% { box-shadow: 0 0 10px #FFD700; }
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-
-  @keyframes bounceIn {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-  }
 </style>
 </head>
 <body>
@@ -404,10 +325,10 @@
       <div class="trust-badge">💯 Money-Back Guarantee</div>
     </div>
 
-    <!-- Payment -->
+    <!-- Payment Card -->
     <div class="payment-card">
       <h3>💰 PAYMENT DETAILS</h3>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+      <div>
         <div><h4>M-Pesa</h4><p>58769044</p></div>
         <div><h4>EcoCash</h4><p>63947686</p></div>
         <div><h4>Molefi Khoele</h4><p>Use this ID when paying</p></div>
@@ -415,9 +336,10 @@
       <p style="color: var(--urgency-red); font-weight:bold; margin-top:1rem;">⏳ Fill in your details after payment!</p>
     </div>
 
-    <!-- M-Pesa Button -->
-    <div>
-      <a href="tel:*200#" onclick="showMpesaModal()" class="mpesa-button">💸 Pay with M-Pesa</a>
+    <!-- Payment Buttons -->
+    <div class="payment-buttons">
+      <button id="mpesaButton" onclick="showMpesaModal()">💸 Pay with M-Pesa</button>
+      <button id="ecocashButton" onclick="alert('EcoCash instructions coming soon!')">💵 Pay with EcoCash</button>
     </div>
 
     <!-- Form -->
@@ -499,22 +421,37 @@
   let seconds = 4406400;
   const timer = setInterval(() => {
     seconds--;
-    const days = String(Math.floor(seconds / (3600 * 24))).padStart(2,'0');
-    const hours = String(Math.floor((seconds % (3600*24)) / 3600)).padStart(2,'0');
-    const minutes = String(Math.floor((seconds % 3600) / 60)).padStart(2,'0');
-    const secs = String(seconds % 60).padStart(2,'0');
+    const days = String(Math.floor(seconds / (3600 * 24))).padStart(2, '0');
+    const hours = String(Math.floor((seconds % (3600 * 24)) / 3600)).padStart(2, '0');
+    const minutes = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+    const secs = String(seconds % 60).padStart(2, '0');
     const countdown = document.getElementById('countdown');
-    if(countdown) countdown.textContent = `${days}d ${hours}h ${minutes}m ${secs}s`;
-    if(seconds <= 0) clearInterval(timer);
-  },1000);
+    if (countdown) countdown.textContent = `${days}d ${hours}h ${minutes}m ${secs}s`;
+    if (seconds <= 0) clearInterval(timer);
+  }, 1000);
 
-  // M-Pesa modal
+  // Transaction validation
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const transactionInput = document.querySelector("input[name='transaction']");
+    const transaction = transactionInput.value.trim();
+    const valid12 = /^[A-Za-z0-9]{12}$/.test(transaction);
+    const valid18 = /^[A-Za-z0-9]{8}\.[A-Za-z0-9]{4}\.[A-Za-z0-9]{6}$/.test(transaction);
+    if(!valid12 && !valid18) {
+      alert("❌ Invalid transaction ID. Check your payment message.");
+      transactionInput.focus();
+      e.preventDefault();
+    }
+  });
+
+  // M-Pesa Modal functions
   function showMpesaModal() {
     document.getElementById('mpesaModal').style.display = 'flex';
   }
+
   function closeMpesaModal() {
     document.getElementById('mpesaModal').style.display = 'none';
   }
 </script>
+
 </body>
 </html>
